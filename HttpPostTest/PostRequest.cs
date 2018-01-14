@@ -20,13 +20,13 @@ namespace HttpPostTest
             Console.WriteLine($"starting request {order}");
             try
             {
-                string Url = "http://192.168.1.1";
+                string Url = "http://192.168.1.1/2";
 
                 HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(Url);
                 httpWReq.Timeout = int.MaxValue;
                 Encoding encoding = new UTF8Encoding();
                 
-                string postData = "I love my husband, he is always here for my, he is my everything.";
+                string postData = "Neznášam svojho šéfa, je to najhorší človek na svete";
                 byte[] data = encoding.GetBytes(postData);
 
                 httpWReq.ProtocolVersion = HttpVersion.Version11;
